@@ -19,18 +19,18 @@ class Header extends Component {
                 </NavLink>
               </li>
               <li>
-                <NavLink activeClassName="active" to="/ruta-prueba">
+                <NavLink activeClassName="active" to="/blog">
                   Blog
                 </NavLink>
               </li>
               <li>
-                <NavLink activeClassName="active" to="/segunda-ruta">
+                <NavLink activeClassName="active" to="/formulario">
                   Formulario
                 </NavLink>
               </li>
               <li>
-                <NavLink activeClassName="active" to="/pagina-1">
-                  Página 1
+                <NavLink activeClassName="active" to="/peliculas">
+                  Películas
                 </NavLink>
               </li>
               <li>

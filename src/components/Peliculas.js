@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import Slider from "./Slider";
 
+import Sidebar from "./Sidebar";
 import Pelicula from "./Pelicula";
 class Peliculas extends Component {
   state = {};
@@ -64,28 +66,32 @@ class Peliculas extends Component {
       favorita = <p>No hay película favorita </p>;
     }
     return (
-      <div id="content" className="peliculas">
-        <h2 className="subheader"> Hola soy peliculas</h2>
-        <p> Seleccion de las películas favoritas de {this.state.nombre}</p>
-        <button onClick={this.cambiarTitulo}>Cambiar titulo</button>
-        {
-          // Condiciones en JSX
-          favorita
-        }
+      <React.Fragment>
+        <Slider title="Peliculas" size="slider-small" />
+        <div id="content" className="peliculas">
+          <h2 className="subheader"> Listado de peliculas</h2>
+          <p> Seleccion de las películas favoritas de {this.state.nombre}</p>
+          <button onClick={this.cambiarTitulo}>Cambiar titulo</button>
+          {
+            // Condiciones en JSX
+            favorita
+          }
 
-        <div id="articles" className="peliculas">
-          {this.state.peliculas.map((pelicula, i) => {
-            return (
-              <Pelicula
-                key={i}
-                pelicula={pelicula}
-                indice={i}
-                marcarFavorita={this.favorita}
-              />
-            );
-          })}
+          <div id="articles" className="peliculas">
+            {this.state.peliculas.map((pelicula, i) => {
+              return (
+                <Pelicula
+                  key={i}
+                  pelicula={pelicula}
+                  indice={i}
+                  marcarFavorita={this.favorita}
+                />
+              );
+            })}
+          </div>
+          <Sidebar blog="true" />
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
