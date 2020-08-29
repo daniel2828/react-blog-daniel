@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import SeccionPruebas from "./components/SeccionPruebas";
 import MiComponente from "./components/Peliculas";
 import Peliculas from "./components/Peliculas";
 import Error from "./components/Error";
